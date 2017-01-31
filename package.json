@@ -1,0 +1,37 @@
+{
+  "name": "prodigee",
+  "version": "1.0.0",
+  "description": "An online resume profile for coding bootcampers",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express-handlebars": "^3.0.0",
+    "express": "^4.14.1",
+    "method-override": "^2.3.7",
+    "mysql": "^2.13.0",
+    "sequelize": "^3.30.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parkjjustin/prodigee.git"
+  },
+  "keywords": [
+    "coding",
+    "code",
+    "bootcamp",
+    "bootcampers",
+    "coder",
+    "programmer",
+    "javascript"
+  ],
+  "author": "Justin Park",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parkjjustin/prodigee/issues"
+  },
+  "homepage": "https://github.com/parkjjustin/prodigee#readme"
+}
