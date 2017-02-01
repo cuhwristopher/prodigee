@@ -1,1 +1,7 @@
 var db = require("../models");
+
+module.exports = (app) => {
+    app.get("/", (request, response) => {
+         response.render("index");
+    });
+};
