@@ -76,6 +76,23 @@ module.exports = function(sequelize, DataTypes) {
 }
 
 module.exports = function(sequelize, DataTypes) {
+  var Jobs = sequelize.define("jobs", {
+    title:{
+      type: DataTypes.STRING
+    },
+    description:{
+      type: DataTypes.BLOB
+    },
+    pay:{
+      type: DataTypes.INTEGER
+    }
+  });
+  return Jobs;
+}
+
+
+
+module.exports = function(sequelize, DataTypes) {
   var Application = sequelize.define("bootcamper", {
     bootcamper_id:{
       type: DataTypes.INTEGER

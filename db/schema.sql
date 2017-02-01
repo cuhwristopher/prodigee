@@ -35,7 +35,7 @@ CREATE TABLE language(
 );
 
 CREATE TABLE job(
-  job_id int NOT NULL,
+  job_id int NOT NULL AUTO_INCREMENT,
   title VARCHAR(255) NOT NULL,
   description BLOB,
   pay int NOT NULL,
