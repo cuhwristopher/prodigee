@@ -39,10 +39,11 @@ CREATE TABLE job(
   pay_max int,
   date timestamp DEFAULT CURRENT_TIMESTAMP,
   PRIMARY kEY (id)
-); 
+);
 
 CREATE TABLE job_applicants(
   bootcamper_id int NOT NULL,
   job_id int NOT NULL,
   hired BOOLEAN NOT NULL default 0
 );
+## did it change?
