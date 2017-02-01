@@ -37,8 +37,7 @@ CREATE TABLE job(
   job_id int NOT NULL,
   title VARCHAR(255) NOT NULL,
   description BLOB,
-  pay_min int NOT NULL,
-  pay_max int,
+  pay int NOT NULL,
   date timestamp DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (job_id)
 );
