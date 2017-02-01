@@ -28,6 +28,7 @@ CREATE TABLE language(
   python BOOLEAN NOT NULL default 0,
   react BOOLEAN NOT NULL default 0,
   ruby BOOLEAN NOT NULL default 0,
+	mysql BOOLEAN NOT NULL default 0,
   go BOOLEAN NOT NULL default 0,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (bootcamper_id)
