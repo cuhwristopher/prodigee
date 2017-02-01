@@ -7,8 +7,7 @@ html {
 body {
     margin: 0;
     font-family: 'Crimson Text', serif;
-    background-color: green;
-    background-image: url('bg.jpg');
+    background-image: url('../img/bg.jpg');
     background-size: cover;
 }
 
