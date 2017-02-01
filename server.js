@@ -14,7 +14,7 @@ app.use(methodOverride("_method"));
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-require("./controllers/burger_controllers.js")(app);
+require("./controllers/prodigee_controller.js")(app);
 
 db.sequelize.sync().then(() => {
     app.listen(PORT, () => {
