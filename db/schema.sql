@@ -9,13 +9,13 @@ CREATE TABLE bootcamper(
   image VARCHAR(255),
     city VARCHAR (255) NOT NULL,
     state VARCHAR (255) NOT NULL,
-  frontend-skill int NOT NULL,
-  backend-skill int NOT NULL,
+  frontend_skill int NOT NULL,
+  backend_skill int NOT NULL,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (id)
+	PRIMARY KEY (bootcamper_id)
 );
 
-CREATE TABLE language2bootcamper(
+CREATE TABLE language(
   bootcamper_id int NOT NULL,
   html BOOLEAN NOT NULL default 0,
   css BOOLEAN NOT NULL default 0,
@@ -29,6 +29,8 @@ CREATE TABLE language2bootcamper(
   react BOOLEAN NOT NULL default 0,
   ruby BOOLEAN NOT NULL default 0,
   go BOOLEAN NOT NULL default 0,
+	date timestamp DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (bootcamper_id)
 );
 
 CREATE TABLE job(
@@ -38,12 +40,14 @@ CREATE TABLE job(
   pay_min int NOT NULL,
   pay_max int,
   date timestamp DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY kEY (id)
+  PRIMARY KEY (job_id)
 );
 
-CREATE TABLE job_applicants(
-  bootcamper_id int NOT NULL,
+CREATE TABLE application(
+  application_id int NOT NULL,
+	bootcamper_id int NOT NULL,
   job_id int NOT NULL,
-  hired BOOLEAN NOT NULL default 0
+  hired BOOLEAN NOT NULL default 0,
+	date timestamp DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (application_id)
 );
-## did it change?
