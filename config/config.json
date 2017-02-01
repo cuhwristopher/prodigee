@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "36xmax",
+=======
+    "password": "password",
+>>>>>>> 6e54ee8fe426c0823004e35fc0e0b0405ddf48fd
     "database": "prodigee_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
