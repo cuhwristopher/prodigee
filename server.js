@@ -17,8 +17,7 @@ app.set("view engine", "handlebars");
 
 require("./controllers/prodigee_controller.js")(app);
 
-
-db.sequelize.sync().then(() => {
+db.sequelize.sync({force: false}).then(() => {
     app.listen(PORT, () => {
         console.log(`Listening on port: ${PORT}`);
     });
