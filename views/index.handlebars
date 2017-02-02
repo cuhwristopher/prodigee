@@ -24,10 +24,10 @@
               <tbody>
                  <tr>
                    {{#if job}}
-                    <td>{{entryDate}}</td>
-                    <td>{{jobTitle}}</td>
-                    <td>{{jobDescription}}</td>
-                    <td>{{payRange}}</td>
+                    <td>{{this.entryDate}}</td>
+                    <td>{{this.jobTitle}}</td>
+                    <td>{{this.jobDescription}}</td>
+                    <td>{{this. payRange}}</td>
                     {{/if}}
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
                  </tr>
@@ -47,8 +47,7 @@
         {{this.JobDescription}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Apply</button>
       </div>
     </div>
   </div>
