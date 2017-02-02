@@ -22,13 +22,15 @@
               </thead>
 </section>
               <tbody>
+                {{#each jobs}}
                  <tr>
-                    <td>01/31/2017</td>
-                    <td>UI Specialist</td>
-                    <td>Design websites etc.</td>
-                    <td>Pay Range</td>
+                    <td>{{this.createdAt}}</td>
+                    <td>{{this.title}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.pay}}</td>
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
                  </tr>
+                 {{/each}}
               </tbody>
            </table>
       </div>
@@ -41,8 +43,8 @@
         <h4 class="modal-title" id="myModalLabel">Job Title:{{{this.JobTitle}}}</h4>
       </div>
       <div class="modal-body">
-        Job Description:
-        {{this.JobDescription}}
+        <p>Job Description:</p>
+        <!-- pass job description by id -->
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
