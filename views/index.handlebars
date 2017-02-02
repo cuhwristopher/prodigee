@@ -1,8 +1,27 @@
-<section id="main content">
+<section id="navigation-bar">
+<div class="row">
+ <nav class="navbar">
+   <div class="col-md-8">
+    <img src="assets/img/prodigeelogo.png" id="logo">
+     </div>
+     <div class="col-md-4">
+    <button type="button" class="btn btn-primary">Post Job</button>
+    <button type="button" class="btn btn-success">Find Work</button>
+    </div>
+    </nav>
+    </div>
+</section>
+<section id="content-header">
+  <div class="row">
       <div class="container">
-         <div class="page-header">
-            <h1>proDigee <small>The Bootcamp coder job market place.</small></h1>
+          <div class="col-md-8">
+            <div class="page-header">
+              <h1>proDigee <small>The Bootcamp coder job market place.</small></h1>
+              </div>
+               </div>
+            <div class="col-md-4"></div>
          </div>
+<section id="jobs-table" class="container">
          <table class="table table-hover">
             <caption>Recent Postings</caption>
               <thead>
@@ -14,25 +33,19 @@
                     <th>Apply</th>
                  </tr>
               </thead>
-
-<section id="main content" class="container">
+</section>
               <tbody>
-                {{#each jobs}}
                  <tr>
-                    <td>{{this.createdAt}}</td>
-                    <td>{{this.title}}</td>
-                    <td>{{this.description}}</td>
-                    <td>{{this.pay}}</td>
+                    <td>01/31/2017</td>
+                    <td>UI Specialist</td>
+                    <td>Design websites etc.</td>
+                    <td>Pay Range</td>
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
                  </tr>
-               {{/each}}
               </tbody>
            </table>
       </div>
 </section>
-
-
-
 <div id="myModal" class="modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -42,7 +55,7 @@
       </div>
       <div class="modal-body">
         Job Description:
-        {{this.description}}
+        {{this.JobDescription}}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -50,5 +63,6 @@
       </div>
     </div>
   </div>
-
 </div>
+<footer class="footer">
+</footer>
