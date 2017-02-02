@@ -34,4 +34,6 @@ module.exports = (app) => {
         response.render("index", hbsObject);
       })
     });
+
+    app.get(/:bootcamper)
 };
