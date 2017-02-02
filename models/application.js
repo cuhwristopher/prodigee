@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Application = sequelize.define("bootcamper", {
+  var Application = sequelize.define("application", {
     bootcamper_id:{
       type: DataTypes.INTEGER
     },

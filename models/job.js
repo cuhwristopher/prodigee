@@ -1,5 +1,9 @@
+var Sequelize = require("sequelize");
+
+var sequelize = require("../config/connection.js")
+
 module.exports = function(sequelize, DataTypes) {
-  var Jobs = sequelize.define("Jobs", {
+  var Job = sequelize.define("job", {
     title:{
       type: DataTypes.STRING
     },
@@ -10,5 +14,5 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER
     }
   });
-  return Jobs;
+  return Job;
 }
