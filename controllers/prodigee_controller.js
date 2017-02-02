@@ -35,5 +35,5 @@ module.exports = (app) => {
       })
     });
 
-    app.get(/:bootcamper)
+    
 };

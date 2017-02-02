@@ -20,31 +20,32 @@
                     <th>Apply</th>
                  </tr>
               </thead>
-</section>
               <tbody>
+                {{#each entry}}
                  <tr>
-                   {{#if job}}
-                    <td>{{this.entryDate}}</td>
-                    <td>{{this.jobTitle}}</td>
-                    <td>{{this.jobDescription}}</td>
-                    <td>{{this. payRange}}</td>
-                    {{/if}}
+                    <td>Entry Date{{this.entryDate}}</td>
+                    <td>Job Title{{this.jobTitle}}</td>
+                    <td>Job Description{{this.jobDescription}}</td>
+                    <td>Pay Range{{this.payRange}}</td>
+                      {{/each}}
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
-                 </tr>
+                </tr>
+
               </tbody>
            </table>
-      </div>
 </section>
 <div id="myModal" class="modal">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Job Title:{{{this.JobTitle}}}</h4>
+        <h4 class="modal-title" id="myModalLabel">Title{{{this.JobTitle}}}</h4>
       </div>
-      <div class="modal-body">
-        Job Description:
-        {{this.JobDescription}}
+      <div class="modal-job-pay">
+        Pay{{{this.JobPay}}}
+      </div>
+      <div class="modal-job-description">
+        Description{{{this.JobDescription}}}
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary">Apply</button>
