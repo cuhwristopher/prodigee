@@ -23,10 +23,11 @@
 </section>
               <tbody>
                  <tr>
-                    <td>01/31/2017</td>
-                    <td>UI Specialist</td>
-                    <td>Design websites etc.</td>
-                    <td>Pay Range</td>
+                   {{#if job}}
+                    <td>{{#entryDate}}</td>
+                    <td>{{#jobTitle}}</td>
+                    <td>{{#jobDescription}}</td>
+                    <td>{{#payRange}}</td>
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
                  </tr>
               </tbody>
