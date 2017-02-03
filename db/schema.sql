@@ -1,3 +1,4 @@
+DROP DATABASE prodigee_db;
 CREATE DATABASE prodigee_db;
 USE prodigee_db;
 
