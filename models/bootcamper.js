@@ -1,24 +1,15 @@
 module.exports = function(sequelize, DataTypes) {
   var Bootcamper = sequelize.define("bootcamper", {
-    name:{
+    first_name:{
       type: DataTypes.STRING
     },
-    email:{
+    last_name:{
       type: DataTypes.STRING
     },
-    password:{
+    zip:{
       type: DataTypes.INTEGER
     },
-    image:{
-      type: DataTypes.STRING
-    },
-    city:{
-      type: DataTypes.STRING
-    },
-    state:{
-      type: DataTypes.STRING
-    },
-    frontend_skill:{
+   frontend_skill:{
       type: DataTypes.INTEGER
     },
     backend_skill:{

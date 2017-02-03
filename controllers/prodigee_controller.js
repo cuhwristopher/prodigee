@@ -16,4 +16,13 @@ module.exports = (app) => {
           pay: request.body.job.pay
         })
     })
+    app.get("/:job_id", function(request, response){
+      db.job.findOne({
+        where:{
+          job_id: request.body.job_id
+        }
+      }).then(function(applyJob){
+        res.redirect(":job_id/apply");
+      });
+  })
 };
