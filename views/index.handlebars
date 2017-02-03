@@ -21,16 +21,15 @@
                  </tr>
               </thead>
               <tbody>
-                {{#each entry}}
+                {{#each jobs}}
                  <tr>
-                    <td>Entry Date{{this.entryDate}}</td>
-                    <td>Job Title{{this.jobTitle}}</td>
-                    <td>Job Description{{this.jobDescription}}</td>
-                    <td>Pay Range{{this.payRange}}</td>
-                      {{/each}}
+                    <td>{{this.createdAt}}</td>
+                    <td>{{this.title}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.pay}}</td>
                     <td><button type="button" id="apply" class="btn btn-success">Apply</button></td>
-                </tr>
-
+                 </tr>
+                 {{/each}}
               </tbody>
            </table>
 </section>
@@ -44,6 +43,9 @@
       <div class="modal-job-pay">
         Pay{{{this.JobPay}}}
       </div>
+      <div class="modal-body">
+        <p>Job Description:</p>
+        <!-- pass job description by id -->
       <div class="modal-job-description">
         Description{{{this.JobDescription}}}
       </div>
