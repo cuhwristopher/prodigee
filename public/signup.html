@@ -54,19 +54,18 @@
 
                   </div>
                     <div class="col-md-4">
-                        <form>
-
+                        <form method="POST" action="./newuser">
                             <div class="form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="first-name" class="form-control" id="firstName" placeholder="First Name">
+                                <input name="first_name" class="form-control" id="firstName" placeholder="First Name">
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name</label>
-                                <input type="last-name" class="form-control" id="lastName" placeholder="Last Name">
+                                <input name="last_name" class="form-control" id="lastName" placeholder="Last Name">
                             </div>
                             <div class="form-group">
                                 <label for="zipCode">Zip Code</label>
-                                <input type="zip-code" class="form-control" id="zip-code" placeholder="ZIP / Postal Code">
+                                <input name="zip-code" class="form-control" id="zip-code" placeholder="ZIP / Postal Code">
                             </div>
                             <div class="form-group has-success has-feedback">
                                 <label for="userEmail">Email</label>
@@ -75,74 +74,74 @@
                             <div class="form-group">
                                 <label for="frontEndSkillz">Front-End Skills</label>
                                 <label class="radio-inline">
-                                      <input type="radio" name="frontend-one" id="frontEnd1" value="fe1"> 1
+                                      <input type="radio" name="frontend" id="frontEnd1" value=1> 1
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="frontend-two" id="frontEnd2" value="fe2"> 2
+                                      <input type="radio" name="frontend" id="frontEnd2" value=2> 2
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="frontend-three" id="frontEnd3" value="fe3"> 3
+                                      <input type="radio" name="frontend" id="frontEnd3" value=3> 3
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="frontend-four" id="frontEnd4" value="fe4"> 4
+                                      <input type="radio" name="frontend" id="frontEnd4" value=4> 4
                                     </label>
                                     <label class="radio-inline">
-                                      <input type="radio" name="frontend-five" id="frontEnd5" value="fe5"> 5
+                                      <input type="radio" name="frontend" id="frontEnd5" value=5> 5
                                     </label>
                             </div>
 
                             <div class="form-group">
                                 <label for="backEndSkillz">Back-End Skills</label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="backend-one" id="backEnd1" value="be1"> 1
+                                    <input type="radio" name="backend" id="backEnd1" value=1> 1
                                     </label>
                                     <label class="radio-inline">
-                                    <input type="radio" name="backend-two" id="backEnd2" value="be2"> 2
+                                    <input type="radio" name="backend" id="backEnd2" value=2> 2
                                     </label>
                                     <label class="radio-inline">
-                                    <input type="radio" name="backend-three" id="backEnd3" value="be3"> 3
+                                    <input type="radio" name="backend" id="backEnd3" value=3> 3
                                     </label>
                                     <label class="radio-inline">
-                                    <input type="radio" name="backend-four" id="backEnd4" value="be4"> 4
+                                    <input type="radio" name="backend" id="backEnd4" value=4> 4
                                     </label>
                                     <label class="radio-inline">
-                                    <input type="radio" name="backend-five" id="backEnd5" value="be5"> 5
+                                    <input type="radio" name="backend" id="backEnd5" value=5> 5
                                     </label>
                             </div>
                             <div class="form-group">
                                 <label for="languageSkillz">Familiar Languages</label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="html-skillz" value="haz-html"> HTML
+                                    <input type="checkbox" id="html-skillz" value="html"> HTML
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="css-skillz" value="haz-css"> CSS
+                                    <input type="checkbox" id="css-skillz" value="css"> CSS
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="javascript-skillz" value="haz-javascript"> JavaScript
+                                    <input type="checkbox" id="javascript-skillz" value="javascript"> JavaScript
                                     </label>
-                                    <input type="checkbox" id="jquery-skillz" value="haz-jquery"> jQuery
-                                    </label>
-                                    <label class="checkbox-inline">
-                                    <input type="checkbox" id="node-skillz" value="haz-node"> Node
+                                    <input type="checkbox" id="jquery-skillz" value="jquery"> jQuery
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="express-skillz" value="haz-express"> Express
-                                    </label>
-                                    <input type="checkbox" id="express-skillz" value="haz-php"> PHP
+                                    <input type="checkbox" id="node-skillz" value="node"> Node
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="java-skillz" value="haz-java"> Java
+                                    <input type="checkbox" id="express-skillz" value="express"> Express
+                                    </label>
+                                    <input type="checkbox" id="express-skillz" value="php"> PHP
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="python-skillz" value="haz-python"> Python
-                                    </label>
-                                    <input type="checkbox" id="react-skillz" value="haz-react"> React
+                                    <input type="checkbox" id="java-skillz" value="java"> Java
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="ruby-skillz" value="haz-ruby"> Ruby
+                                    <input type="checkbox" id="python-skillz" value="python"> Python
+                                    </label>
+                                    <input type="checkbox" id="react-skillz" value="react"> React
                                     </label>
                                     <label class="checkbox-inline">
-                                    <input type="checkbox" id="ruby-skillz" value="haz-sql"> MySQL
+                                    <input type="checkbox" id="ruby-skillz" value="ruby"> Ruby
+                                    </label>
+                                    <label class="checkbox-inline">
+                                    <input type="checkbox" id="ruby-skillz" value="sql"> MySQL
                                     </label>
                                     <br />
                                     <br />

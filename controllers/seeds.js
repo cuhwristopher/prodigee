@@ -1,5 +1,7 @@
 var db = require("../models");
 
+console.log("SEEDS!")
+
 module.exports = function jobSeeds(){
     db.job.create({
       title: "Build CRM for small business",

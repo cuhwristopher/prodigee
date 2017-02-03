@@ -4,12 +4,9 @@ USE prodigee_db;
 
 CREATE TABLE bootcamper(
 	bootcamper_id int NOT NULL AUTO_INCREMENT,
-	name VARCHAR(255) NOT NULL,
-	email VARCHAR(300) NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  image VARCHAR(255),
-    city VARCHAR (255) NOT NULL,
-    state VARCHAR (255) NOT NULL,
+	first_name VARCHAR(255) NOT NULL,
+	last_name VARCHAR(255) NOT NULL,
+  zip int NOT NULL,
   frontend_skill int NOT NULL,
   backend_skill int NOT NULL,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
