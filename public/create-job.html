@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./assets/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./assets/img/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./assets/img/manifest.json">
+    <link rel="mask-icon" href="./assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+
+<section id="navigation-bar">
+    <div class="row">
+        <nav class="navbar">
+            <div class="col-md-8">
+                <img src="assets/img/prodigeelogo.png" id="logo">
+            </div>
+            <div class="col-md-4">
+                <button type="button" class="btn btn-primary" action="/signup" method="GET">Sign Up</button>
+                <button type="button" class="btn btn-success" action="/login" method="GET">Login</button>
+            </div>
+        </nav>
+    </div>
+</section>
+
+
+<section id="main-body">
+    <body>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <div class="page-header">
+                    <h2>Posting a job</h2>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="jobTitleLabel">Job Title</label>
+                            <input type="job-title" class="form-control" id="job-title" placeholder="Job Title">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-inline">
+                                        <label for="exampleInputPassword1">Pay Range</label>
+                                        <input type="pay-range" class="form-control" id="pay-range" placeholder="Pay Range">
+
+                                    <div class="col-md-4">
+                                        <select class="form-control">
+                                          <option>Weekly</option>
+                                          <option>Monthly</option>
+                                          <option>Quarterly</option>
+                                          <option>Annually</option>
+                                    </select>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <br />
+                                    <label for="exampleInputPassword1">Job Description</label>
+                                <div class="col-md-4">
+
+                                </div>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                            <button type="submit" id="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                        <div class="col-md-4"></div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCd4sdDQQZI8y3hlVYKkYIBz6umDdFPxMs",
+                authDomain: "prodigee-c83ac.firebaseapp.com",
+                databaseURL: "https://prodigee-c83ac.firebaseio.com",
+                storageBucket: "prodigee-c83ac.appspot.com",
+                messagingSenderId: "174769123946"
+            };
+            firebase.initializeApp(config);
+
+
+
+            $("#submit").click(function(){
+              var email = $("#userEmail").val().trim();
+              var password = $("#userPassword").val().trim();
+              firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+                  // Handle Errors here.
+                  var errorCode = error.code;
+                  var errorMessage = error.message;
+                  if(err){
+                    alert(errorMessage);
+                  }
+                  // ...
+              });
+              console.log("signed up: ", email);
+            })
+
+
+
+        </script>
+    </body>
+
+</html>
