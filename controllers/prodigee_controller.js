@@ -19,14 +19,15 @@ module.exports = (app) => {
         }).then(function(newUser){
           var hbsObject = {
             bootcampers: newUser
-          })
+          }
       response.render("profile", hbsObject);
     });
+  });
     app.post("/postjob", function(request, response){
         db.job.create({
           title: request.body.job.title,
           description: request.body.job.description,
           pay: request.body.job.pay
-        })
+        });
     });
-};
+  };
