@@ -17,6 +17,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 
+// require("./controllers/seeds.js")(app);
 require("./controllers/prodigee_controller.js")(app);
 require("./controllers/html-routes.js")(app);
 

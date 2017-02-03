@@ -1,5 +1,6 @@
 var Sequelize = require("sequelize");
 
+var sequelize = require("../config/connection.js");
 
 module.exports = function(sequelize, DataTypes) {
   var Job = sequelize.define("job", {
