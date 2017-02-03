@@ -9,7 +9,7 @@ module.exports = (app) => {
         response.render("index", hbsObject);
       })
     });
-    app.post("/job-posting/postJob", function(request, response){
+    app.post("/postjob", function(request, response){
         db.job.create({
           title: request.body.job.title,
           description: request.body.job.description,
