@@ -7,6 +7,7 @@ module.exports = (app) => {
           jobs: allJobs
         };
         response.render("index", hbsObject);
+        console.log(hbsObject);
       })
     });
     app.post("/signup/create_profile", function(request, response){
@@ -17,14 +18,14 @@ module.exports = (app) => {
           frontend_skill: request.body.frontend_skill,
           backend_skill: request.body.backend_skill,
         }).then(function(newUser){
-          console.log(newUser);
-          response.redirect("/:bootcamper_id/user-profile");
+          var userId = newUser.id;
+          response.redirect("/user-profile/" + userId);
     });
   });
-    app.get("/:id/user-profile", (request, response) =>{
-      db.bootcamper.findAll({
+    app.get("/user-profile/:userId", (request, response) =>{
+      db.bootcamper.findOne({
           where: {
-            id: request.params.id
+            id: request.params.userId
           }
         }
       ).then(function(currentUser){
@@ -32,6 +33,7 @@ module.exports = (app) => {
           bootcampers: currentUser
         };
           response.render("user-profile", hbsObject);
+          console.log(hbsObject);
       });
     });
     app.post("/postjob", function(request, response){
