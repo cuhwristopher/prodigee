@@ -25,9 +25,9 @@ module.exports = (app) => {
   });
     app.post("/postjob", function(request, response){
         db.job.create({
-          title: request.body.job.title,
-          description: request.body.job.description,
-          pay: request.body.job.pay
+          title: request.body.title,
+          description: request.body.description,
+          pay: request.body.pay
         });
     });
   };

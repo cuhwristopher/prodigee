@@ -14,7 +14,7 @@ CREATE TABLE bootcamper(
 );
 
 CREATE TABLE language(
-  bootcamper_id int NOT NULL,
+	language_id int NOT NULL AUTO_INCREMENT,
   html BOOLEAN NOT NULL default 0,
   css BOOLEAN NOT NULL default 0,
   javascript BOOLEAN NOT NULL default 0,
@@ -29,7 +29,7 @@ CREATE TABLE language(
 	mysql BOOLEAN NOT NULL default 0,
   go BOOLEAN NOT NULL default 0,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (bootcamper_id)
+	PRIMARY KEY (language_id)
 );
 
 CREATE TABLE job(
@@ -42,9 +42,7 @@ CREATE TABLE job(
 );
 
 CREATE TABLE application(
-  application_id int NOT NULL,
-	bootcamper_id int NOT NULL,
-  job_id int NOT NULL,
+  application_id int NOT NULL AUTO_INCREMENT,
   hired BOOLEAN NOT NULL default 0,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (application_id)

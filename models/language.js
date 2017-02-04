@@ -1,8 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
   var BootcamperLanguages = sequelize.define("language", {
-    bootcamper_id:{
-      type: DataTypes.INTEGER
-    },
     html:{
       type: DataTypes.BOOLEAN
     },

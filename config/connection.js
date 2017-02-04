@@ -1,6 +1,6 @@
-var Sequelize = require("sequelize");
+const Sequelize = require("sequelize");
 
-var sequelize = new Sequelize("prodigee_db", "root", "36xmax",{
+const sequelize = new Sequelize("prodigee_db", "root", "36xmax",{
   host: "localhost",
   dialect: "mysql",
   pool: {
