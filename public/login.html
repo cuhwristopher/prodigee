@@ -34,7 +34,7 @@
     <body>
       <section id="main-body">
         <div class="container-fluid">
-        <div class="row">
+          <div class="row">
             <div class="col-md-4">
                 <div class="page-header">
                     <h2>Login</h2>
@@ -78,7 +78,7 @@
             $("#submit").click(function(){
               var email = $("#userEmail").val().trim();
               var password = $("#userPassword").val().trim();
-              firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+              firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
                   // Handle Errors here.
                   var errorCode = error.code;
                   var errorMessage = error.message;
@@ -87,7 +87,9 @@
                   }
                   // ...
               });
-              console.log("signed up: ", email);
+              function(){
+                window.location.href="./passed";
+              }
             })
 
 

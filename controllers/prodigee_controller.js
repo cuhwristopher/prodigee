@@ -33,6 +33,16 @@ module.exports = (app) => {
           response.redirect("/user-profile/" + userId);
     });
   });
+    app.get("/login/passed", (request, response) =>{
+      db.bootcamper.findOne({
+        where:{
+          email: request.body.email
+        }
+      }).then(function(retUser){
+        var userId = retUser.id;
+        response.redirect("/user-profile/" + userId);
+      })
+    })
     app.get("/user-profile/:userId", (request, response) =>{
       db.bootcamper.findOne({
           where: {
@@ -65,6 +75,9 @@ module.exports = (app) => {
           title: request.body.title,
           description: request.body.description,
           pay: request.body.pay
-        });
+    }).then(function(newJob){
+      console.log(newJob);
+      response.redirect("/");
     });
-  };
+  });
+};
