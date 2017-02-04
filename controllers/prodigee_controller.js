@@ -17,12 +17,23 @@ module.exports = (app) => {
           frontend_skill: request.body.frontend_skill,
           backend_skill: request.body.backend_skill,
         }).then(function(newUser){
-          var hbsObject = {
-            bootcampers: newUser
-          }
-      response.render("profile", hbsObject);
+          console.log(newUser);
+          response.redirect("/:bootcamper_id/user-profile");
     });
   });
+    app.get("/:id/user-profile", (request, response) =>{
+      db.bootcamper.findAll({
+          where: {
+            id: request.params.id
+          }
+        }
+      ).then(function(currentUser){
+        var hbsObject = {
+          bootcampers: currentUser
+        };
+          response.render("user-profile", hbsObject);
+      });
+    });
     app.post("/postjob", function(request, response){
         db.job.create({
           title: request.body.title,
