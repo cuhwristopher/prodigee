@@ -17,6 +17,17 @@ module.exports = (app) => {
           zip: request.body.zip,
           frontend_skill: request.body.frontend_skill,
           backend_skill: request.body.backend_skill,
+          html: request.body.html,
+          css: request.body.css,
+          javascript: request.body.javascript,
+          jquery: request.body.jquery,
+          node: request.body.node,
+          express: request.body.express,
+          php: request.body.php,
+          java: request.body.java,
+          python: request.body.python,
+          react: request.body.react,
+          mysql: request.body.mysql
         }).then(function(newUser){
           var userId = newUser.id;
           response.redirect("/user-profile/" + userId);

@@ -9,13 +9,7 @@ CREATE TABLE bootcamper(
   zip int NOT NULL,
   frontend_skill int NOT NULL,
   backend_skill int NOT NULL,
-	date timestamp DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (bootcamper_id)
-);
-
-CREATE TABLE language(
-	language_id int NOT NULL AUTO_INCREMENT,
-  html BOOLEAN NOT NULL default 0,
+	html BOOLEAN NOT NULL default 0,
   css BOOLEAN NOT NULL default 0,
   javascript BOOLEAN NOT NULL default 0,
   jquery BOOLEAN NOT NULL default 0,
@@ -27,10 +21,10 @@ CREATE TABLE language(
   react BOOLEAN NOT NULL default 0,
   ruby BOOLEAN NOT NULL default 0,
 	mysql BOOLEAN NOT NULL default 0,
-  go BOOLEAN NOT NULL default 0,
 	date timestamp DEFAULT CURRENT_TIMESTAMP,
-	PRIMARY KEY (language_id)
+	PRIMARY KEY (bootcamper_id)
 );
+
 
 CREATE TABLE job(
   job_id int NOT NULL AUTO_INCREMENT,
