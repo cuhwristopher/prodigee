@@ -13,10 +13,17 @@ module.exports = function(app) {
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/signup.html"));
   });
-
   // add route loads the post-job.html page,
-  // where users can enter new characters to the db
-  app.get("/add", function(req, res) {
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../public/login.html"));
+  });
+  // add route loads the post-job.html page,
+  app.get("/create-job", function(req, res) {
+    res.sendFile(path.join(__dirname + "/../public/create-job.html"));
+  });
+  // add route loads the post-job.html page,
+  app.get("/post-job", function(req, res) {
     res.sendFile(path.join(__dirname + "/../public/post-job.html"));
   });
+
 };

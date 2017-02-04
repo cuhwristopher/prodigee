@@ -9,7 +9,7 @@ module.exports = (app) => {
         response.render("index", hbsObject);
       })
     });
-    app.post("/signup/newuser", function(request, response){
+    app.post("/signup/create_profile", function(request, response){
         db.bootcamper.create({
           first_name: request.body.first_name,
           last_name: request.body.last_name,
