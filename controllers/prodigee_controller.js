@@ -47,6 +47,19 @@ module.exports = (app) => {
           console.log(hbsObject);
       });
     });
+    app.get("/apply/:jobId",(request, response) =>{
+      db.job.findOne({
+        where:{
+          id: request.params.jobId
+        }
+      }).then(function(jobData){
+        var hbsObject = {
+          jobs: jobData
+        };
+        response.render("apply", hbsObject);
+        console.log(jobData.title);
+      });
+    });
     app.post("/postjob", function(request, response){
         db.job.create({
           title: request.body.title,

@@ -1,4 +1,5 @@
-$("#apply").on("click", function(){
+$(".apply").on("click", function(){
+  var selectedJob = this.id;
   $("#myModal").css("display", "block")
 })
 
